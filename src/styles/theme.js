@@ -15,5 +15,5 @@ export const theme = {
   font_s: '12px',
   font_xs: '10px',
 
-  font_bold: '700',
+  font_bold: 'bold',
 }

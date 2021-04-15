@@ -10,6 +10,7 @@ const fontStyle = styled.div`
 
    ${props => props.bold && css`font-weight: ${props.theme.font_bold};`}
    ${props => props.center && css`text-align: center`};
+   ${props => props.link && css`cursor: pointer; :hover { opacity: 0.5 };`};
 `
 
 
