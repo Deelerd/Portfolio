@@ -7,7 +7,7 @@ export const BarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: ${props => props.theme.primary};
+  background-image: linear-gradient(180deg, ${props => props.theme.black}, ${props => props.theme.primary});
   position: sticky;
   top: 0;
   z-index: 999;
@@ -18,12 +18,18 @@ export const LanguageBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid ${props => props.theme.second}
+  border: 1px solid ${props => props.theme.white};
 `
 
 export const LanguageSelect = styled.div`
   cursor: pointer;
-  ${props => props.select && css`background-color: ${props => props.theme.second}`}
+  color: ${props => props.theme.second};
+  font-size: ${props => props.theme.font_m};
+  ${props => props.select && css`
+    background-color: ${props.theme.white}; 
+    color: ${props.theme.primary};
+    font-weight: bold;
+  `}
 `
 
 export const Sidebar = styled.div`
@@ -54,7 +60,7 @@ export const SidebarItem = styled.div`
   }
 `
 
-export const SidebarTitle = styled.i`
+export const SidebarTitle = styled.div`
   width: 100%;
   padding: 30px 10px;
   display: flex;

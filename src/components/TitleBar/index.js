@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { withRouter } from 'react-router-dom'
 import { FontM } from '../Font'
-import DropdownList from '../DropdownList'
 import { BarContainer, LanguageBox, LanguageSelect, Sidebar, SidebarItem, SidebarTitle } from './bar.style'
 
 import { selectLang } from '../../redux/actions/language'
@@ -16,28 +15,6 @@ const TitleBar = (props) => {
     { id: 'en', value: 'English' },
     { id: 'th', value: 'Thai' }
   ]
-
-  const contact = [{
-    id: 'facebook',
-    value: 'Facebook',
-    icon: 'fab fa-facebook-square',
-    href: 'https://www.facebook.com/deelerddee/'
-  }, {
-    id: 'line',
-    value: 'Line',
-    icon: 'fab fa-line',
-    href: 'http://line.me/ti/p/~deelerdkub'
-  }, {
-    id: 'email',
-    value: 'Email',
-    icon: 'fas fa-envelope-square',
-    href: 'mailto:deelerdkub@gmail.com'
-  }, {
-    id: 'phone',
-    value: 'Phone',
-    icon: 'fas fa-phone-square-alt',
-    href: 'tel:0845428595'
-  }]
 
   const menu = [{
     id: 'profile',
@@ -61,12 +38,6 @@ const TitleBar = (props) => {
     }
 
     window.document.addEventListener('click', clickOutBtn)
-
-    if (isSidebar)
-      document.body.style.backgroundColor = "rgba(0,0,0,0.4)"
-    else
-      document.body.style.backgroundColor = "rgba(0,0,0,0)"
-
     return () => window.document.removeEventListener('click', clickOutBtn)
   }, [isSidebar])
 
@@ -85,22 +56,19 @@ const TitleBar = (props) => {
         <i className="fas fa-bars mr-2" /> {current_menu.name.toUpperCase()}
       </FontM>
     </div>
-    <div className='d-flex align-items-center'>
-      <DropdownList btnName={dictionary.contacts} list={contact} onClick={(link) => window.open(link, '_blank')} />
-      <LanguageBox className='ml-2'>
-        {
-          language.map((val, key) => {
-            return <LanguageSelect
-              key={`${key}_${val.id}`}
-              className='px-1'
-              select={dictionary.locale === val.id}
-              onClick={() => props.selectLang(val.id)}>
-              <FontM bold white>{val.id.toUpperCase()}</FontM>
-            </LanguageSelect>
-          })
-        }
-      </LanguageBox>
-    </div>
+    <LanguageBox className='ml-2'>
+      {
+        language.map((val, key) => {
+          return <LanguageSelect
+            key={`${key}_${val.id}`}
+            className='px-1'
+            select={dictionary.locale === val.id}
+            onClick={() => props.selectLang(val.id)}>
+            {val.id.toUpperCase()}
+          </LanguageSelect>
+        })
+      }
+    </LanguageBox>
     <Sidebar id='sidebar' isSidebar={isSidebar}>
       <SidebarTitle>
         <div>{dictionary.first_name.toUpperCase()}</div>

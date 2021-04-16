@@ -4,6 +4,7 @@ const fontStyle = styled.div`
    color: ${props => props.theme.primary};
    ${props => props.second && css`color: ${props.theme.second};`}
    ${props => props.blue && css`color: ${props.theme.blue};`}
+   ${props => props.orange && css`color: ${props.theme.orange};`}
    ${props => props.white && css`color: ${props.theme.white};`}
    ${props => props.gray && css`color: ${props.theme.gray};`}
    ${props => props.black && css`color: ${props.theme.black};`}
@@ -11,6 +12,7 @@ const fontStyle = styled.div`
    ${props => props.bold && css`font-weight: ${props.theme.font_bold};`}
    ${props => props.center && css`text-align: center`};
    ${props => props.link && css`cursor: pointer; :hover { opacity: 0.5 };`};
+   ${props => props.fit && css`width: fit-content`};
 `
 
 

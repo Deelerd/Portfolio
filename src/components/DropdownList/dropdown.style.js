@@ -10,7 +10,7 @@ export const DropdownButton = styled.div`
     padding: 0px 10px;
     margin: 1px 0px;
     cursor: pointer;
-    border: 1px solid ${props => props.theme.second};
+    border: 1px solid ${props => props.theme.border};
 `
 
 export const DropdownBox = styled.div`
