@@ -38,7 +38,7 @@ export const ProfileDetail = styled.div`
 
 export const ProfileContent = styled.div`
   width: 100%;
-  padding: .5rem 1rem;
+  padding: .5rem 0rem;
 `
 
 export const IconContact = styled.i`
