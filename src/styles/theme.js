@@ -8,6 +8,8 @@ export const theme = {
   Wgray: '#dee2e6',
   border: '#dee2e6',
   black: '#000000',
+  red: '#EF2020',
+  green: '#79df10',
 
   font_xl: '18px',
   font_l: '16px',
