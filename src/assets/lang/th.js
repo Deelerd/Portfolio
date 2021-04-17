@@ -43,7 +43,7 @@ const lang = {
   title: 'หัวข้อ',
   position: 'ตำแหน่ง',
   duration: 'ระยะเวลา',
-  company_description : 'รายละเอียดบริษัท',
+  company_description: 'รายละเอียดบริษัท',
   project: 'โปรเจค',
   project_description: 'รายละเอียดโปรเจค',
   responsibility: 'ความรับผิดชอบ',
@@ -138,7 +138,17 @@ const lang = {
   my_job_interests: [
     'Full stack developer',
     'Frontend developer'
-  ]
+  ],
+
+  // coding
+  wheel_game: 'เกมวงล้อ',
+  random_value: 'ค่าที่ต้องการสุ่ม',
+  add_piece_wheel: 'เพิ่มค่าสุ่ม',
+  error_value_wheel: 'กรุณากำหนดค่าสุ่ม',
+  set_random_value: 'กำหนดค่าที่ต้องการสุ่ม',
+  min_piece_wheel: 'ขั้นต่ำ',
+  max_piece_wheel: 'สูงสุด',
+  piece: 'ชิ้น',
 };
 
 export default lang;
